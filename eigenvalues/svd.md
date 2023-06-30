@@ -507,6 +507,49 @@ Similar computations show $A^+AA^+=A^+$.
 ```
 ````
 
+````{div} proposition
+$(A^+)^T = (A^T)^+$.
+
+```{dropdown} Proof
+Let $A$ be a $m \times n$ matrix such that $\mathrm{rank}(A) = r$ and let $A = P \Sigma Q^T$. Also let $A^+ = Q \Sigma^+ P^T$.
+
+First compute LHS:
+
+$$
+\begin{align*}
+(A^+)^T &= (Q \Sigma^+ P^T)^T \\
+&= P (\Sigma^+)^T Q^T
+\end{align*}
+$$
+
+Now compute RHS:
+
+$$
+\begin{align*}
+(A^T)^+ &= (Q \Sigma^T + P^T)^+ \\
+&= P (\Sigma^T)^+ Q^T
+\end{align*}
+$$
+
+Notice that we need to see whether $(\Sigma^+)^T = (\Sigma^T)^+$ in order to verfy that LHS $=$ RHS.
+
+$$
+(\Sigma^+)^T =
+\left[ \begin{array}{ccc|c}
+\sigma_1^{-1} & & & \\
+& \ddots & & \boldsymbol{0} \\
+& & \sigma_r^{-1} & \\ \hline
+& \boldsymbol{0} & & \boldsymbol{0}
+\end{array} \right]_{m \times n}
+= (\Sigma^T)^+
+$$
+
+Thus $(A^+)^T = (A^T)^+$.
+
+```
+````
+
+
 ## SVD Expansion
 
 ````{div} theorem
